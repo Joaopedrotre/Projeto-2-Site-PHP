@@ -1,0 +1,28 @@
+# Ignore Node.js dependencies
+node_modules/
+
+# Ignore Python compiled files and virtual environments
+__pycache__/
+*.pyc
+.venv/
+
+# Ignore environment variables and secrets
+.env
+secrets.txt
+
+# Ignore log files
+*.log
+npm-debug.log*
+
+# Ignore OS-specific files (macOS/Windows)
+.DS_Store
+Thumbs.db
+
+# Ignore IDE settings (VS Code/IntelliJ)
+.vscode/
+.idea/
+
+# Ignore build directories
+dist/
+build/
+target/
