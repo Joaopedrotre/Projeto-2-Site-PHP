@@ -3,6 +3,8 @@
     --amarelo: #E7B92D;
     --branco: #FFFFFF;
     --cinza: #F8F9FA;
+    --cinza-borda: #DEE2E6;
+    --texto: #212529;    
 }
 
 body {
@@ -111,4 +113,114 @@ body {
 
 .footer a:hover {
     color: var(--amarelo);
+}
+
+.produtos{
+
+    background: #F8F9FA;
+
+    padding: 80px 0;
+
+}
+
+.filtro-produtos{
+
+    border: 2px solid black;
+
+    border-radius: 50px;
+
+    text-align: center;
+
+    padding: 12px;
+
+}
+
+.produto-card{
+
+    transition: .2s;
+
+}
+
+.produto-card:hover{
+
+    transform: translateY(-5px);
+
+}
+
+.produto-card img{
+
+    height: 250px;
+
+    object-fit: contain;
+
+    padding: 10px;
+
+}
+
+.catalogo {
+
+    padding: 80px 0;
+
+    background: var(--cinza);
+
+}
+
+.catalogo-container {
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+}
+
+.catalogo-container iframe {
+
+    border: none;
+
+}
+
+.whatsapp-float {
+
+    position: fixed;
+
+    bottom: 25px;
+
+    right: 25px;
+
+    width: 65px;
+
+    height: 65px;
+
+    background: #25D366;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-decoration: none;
+
+    font-size: 32px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+
+    z-index: 9999;
+
+    transition: 0.2s ease;
+
+}
+
+.whatsapp-float:hover {
+
+    transform: scale(1.1);
+
+    color: white;
+
 }
