@@ -16,9 +16,9 @@
                 </h1>
 
                 <p class="lead text-muted mb-4">
-                    O maior mix do Brasil de filmes PVC,
+                    O maior mix de produtos do Brasil em filmes PVC,
                     descartáveis PP e PS, isopores e embalagens
-                    para empresas.
+                    para empresas na Região Sul do país.
                 </p>
 
                 <a href="index.php?page=produtos"
@@ -136,7 +136,10 @@
 
                 <div class="card-body text-center">
 
-                    <i class="bi bi-box-seam icon-card"></i>
+                    <img
+                        src="assets/img/produtos/Filme-de-PVC-380-x-10u-x-1000.png"
+                        alt="Filme PVC"
+                        class="segment-img">
 
                     <h4>Filmes PVC</h4>
 
@@ -155,8 +158,10 @@
 
                 <div class="card-body text-center">
 
-                    <i class="bi bi-cup-straw icon-card"></i>
-
+                    <img
+                        src="assets/img/produtos/Copo-PP-Transparente-770-ml.png"
+                        alt="Copo 770ml"
+                        class="segment-img">
                     <h4>Linha plástica</h4>
 
                     <p>
@@ -173,7 +178,10 @@
 
                 <div class="card-body text-center">
 
-                    <i class="bi bi-grid icon-card"></i>
+                    <img
+                        src="assets/img/produtos/M65.png"
+                        alt="Marmita G - 900ml"
+                        class="segment-img">
 
                     <h4>Isopores</h4>
 
