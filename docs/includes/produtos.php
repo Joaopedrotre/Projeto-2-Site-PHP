@@ -4,11 +4,75 @@ require_once __DIR__ . '/../config/conexao.php';
 
 $categoriaSelecionada = $_GET['categoria'] ?? 'todos';
 
+// BUSCAR CATEGORIAS
+
 $stmtCategorias = $pdo->query(
     "SELECT * FROM categorias ORDER BY nome"
 );
 
 $categorias = $stmtCategorias->fetchAll(PDO::FETCH_ASSOC);
+
+// ARRAY ESTRUTURADO
+
+$nomesCategorias = [];
+
+foreach ($categorias as $categoria) {
+
+    $nomesCategorias[] = $categoria['nome'];
+}
+
+// FUNÇÕES
+
+function validarCategoria($categoria, $categoriasDisponiveis)
+{
+    if ($categoria === 'todos') {
+
+        return true;
+    }
+
+    return in_array($categoria, $categoriasDisponiveis);
+}
+
+function contarProdutos($produtos)
+{
+    return count($produtos);
+}
+
+function agruparProdutosPorCategoria($produtos)
+{
+    $grupos = [];
+
+    foreach ($produtos as $produto) {
+
+        $grupos[$produto['categoria']][] = $produto;
+    }
+
+    return $grupos;
+}
+
+function buscarProdutoPorNome($produtos, $nome)
+{
+    foreach ($produtos as $produto) {
+
+        if (
+            stripos($produto['nome'], $nome) !== false
+        ) {
+
+            return $produto;
+        }
+    }
+
+    return null;
+}
+
+// VALIDAÇÃO
+
+if (!validarCategoria($categoriaSelecionada, $nomesCategorias)) {
+
+    $categoriaSelecionada = 'todos';
+}
+
+// SQL
 
 $sql = "
 
@@ -55,6 +119,22 @@ $stmt->execute();
 
 $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+$dadosSistema = [
+
+    'categorias' => $nomesCategorias,
+
+    'produtos' => $produtos
+
+];
+
+// VARIÁVEIS AUXILIARES
+
+$produtosAgrupados = agruparProdutosPorCategoria($produtos);
+
+$totalCategorias = count($produtosAgrupados);
+
+$totalProdutos = contarProdutos($produtos);
+
 ?>
 
 <section class="produtos">
@@ -66,6 +146,12 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
             Produtos Ultra Descartáveis
 
         </h1>
+
+        <p class="text-center text-muted">
+
+            <?= $totalProdutos ?> produtos encontrados em <?= $totalCategorias ?> categorias
+
+        </p>
 
         <!-- FILTRO -->
 
@@ -117,54 +203,61 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         <div class="row g-4 justify-content-center">
 
-            <?php
+            <?php if (empty($produtos)) { ?>
 
-            foreach ($produtos as $produto) {
+                <div class="alert alert-warning text-center">
 
-                if (
-                    $categoriaSelecionada != 'todos' &&
-                    $produto['categoria'] != $categoriaSelecionada
-                ) {
+                    Nenhum produto encontrado.
 
-                    continue;
-                }
+                </div>
 
-            ?>
+            <?php } else { ?>
 
-                <div class="col-md-4">
+                <?php foreach ($produtos as $produto) { ?>
 
-                    <div class="card produto-card h-100">
+                    <div class="col-md-4">
 
-                        <img
+                        <div class="card produto-card h-100">
 
-                            src="<?= $produto['imagem'] ?>"
+                            <img
 
-                            class="card-img-top"
+                                src="<?= $produto['imagem'] ?>"
 
-                            alt="<?= $produto['nome'] ?>">
+                                class="card-img-top"
 
-                        <div class="card-body text-center">
+                                alt="<?= $produto['nome'] ?>">
 
-                            <h5>
-                                <?= $produto['nome'] ?>
-                            </h5>
+                            <div class="card-body text-center">
 
-                            <p>
-                                <strong>Categoria:</strong>
-                                <?= ucfirst($produto['categoria']) ?>
-                            </p>
+                                <h5>
 
-                            <p class="text-muted">
-                                <strong>Descrição:</strong>
-                                <?= $produto['descricao'] ?>
-                            </p>
+                                    <?= $produto['nome'] ?>
 
+                                </h5>
+
+                                <p>
+
+                                    <strong>Categoria:</strong>
+
+                                    <?= ucfirst($produto['categoria']) ?>
+
+                                </p>
+
+                                <p class="text-muted">
+
+                                    <strong>Descrição:</strong>
+
+                                    <?= $produto['descricao'] ?>
+
+                                </p>
+
+                            </div>
 
                         </div>
 
                     </div>
 
-                </div>
+                <?php } ?>
 
             <?php } ?>
 

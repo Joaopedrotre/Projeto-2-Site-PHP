@@ -16,9 +16,8 @@
                 </h1>
 
                 <p class="lead text-muted mb-4">
-                    Especialistas em filmes PVC,
-                    descartáveis, isopores,
-                    bandejas e embalagens
+                    O maior mix do Brasil de filmes PVC,
+                    descartáveis PP e PS, isopores e embalagens
                     para empresas.
                 </p>
 
@@ -49,6 +48,77 @@
 
 </section>
 
+<section class="grupo-ultra py-5 bg-light">
+
+    <div class="container">
+
+        <div class="card border-0 shadow-sm overflow-hidden">
+
+            <div class="row g-0 align-items-stretch">
+
+                <!-- TEXTO -->
+                <div class="col-md-6 p-4 d-flex flex-column justify-content-between">
+
+                    <div>
+
+                        <h2 class="mb-3">
+                            Grupo Ultra Descartáveis
+                        </h2>
+
+                        <p class="text-muted">
+                            O Grupo Ultra Descartáveis atua no setor de fabricação e distribuição de soluções em embalagens e produtos descartáveis, atendendo demandas do mercado alimentício, varejista e de serviços.
+                        </p>
+
+                        <p class="text-muted">
+                            A indústria de descartáveis desempenha um papel essencial na cadeia de suprimentos moderna, oferecendo praticidade, higiene e eficiência logística para negócios que trabalham com alimentos e consumo rápido.
+                        </p>
+
+                        <p class="text-muted">
+                            Com foco em inovação e escala produtiva, o setor busca constantemente otimizar processos, reduzir custos operacionais e ampliar a disponibilidade de produtos essenciais para o comércio.
+                        </p>
+
+                    </div>
+
+                    <!-- LOGO + LINK -->
+                    <div class="d-flex align-items-center gap-3 mt-4">
+
+                        <img
+                            src="assets/img/logo-grupo-ultra-descartaveis.jpg"
+                            alt="Logo Grupo Ultra"
+                            style="height: 40px; width: auto;">
+
+                        <a
+                            href="https://ultradescartaveis.com.br"
+                            target="_blank"
+                            class="btn btn-orange">
+
+                            Visitar site oficial
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- IMAGEM -->
+                <div class="col-md-6">
+
+                    <img
+                        src="assets/img/foto-telhado-grupo-ultra-novo.jpg"
+                        alt="Indústria Grupo Ultra Descartáveis"
+                        class="w-100 h-100"
+                        style="object-fit: cover;">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
 <section class="container py-5">
 
     <div class="text-center mb-5">
@@ -71,8 +141,8 @@
                     <h4>Filmes PVC</h4>
 
                     <p>
-                        Soluções para proteção,
-                        armazenamento e embalagem.
+                        Rolos de vários tamanhos para proteção,
+                        armazenamento e embalagem de produtos.
                     </p>
 
                 </div>
@@ -85,13 +155,12 @@
 
                 <div class="card-body text-center">
 
-                    <i class="bi bi-cup-hot icon-card"></i>
+                    <i class="bi bi-cup-straw icon-card"></i>
 
-                    <h4>Descartáveis</h4>
+                    <h4>Linha plástica</h4>
 
                     <p>
-                        Copos, talheres, marmitas
-                        e itens para alimentação.
+                        Copos, talheres e potes com a melhor qualidade e preço no ramo de utensílios de material PP e PS.
                     </p>
 
                 </div>
@@ -106,11 +175,10 @@
 
                     <i class="bi bi-grid icon-card"></i>
 
-                    <h4>Isopores e Bandejas</h4>
+                    <h4>Isopores</h4>
 
                     <p>
-                        Produtos térmicos e embalagens
-                        alimentícias.
+                        Marmitas de todos os tamanhos e formatos para conservação ideal da temperatura dos alimentos.
                     </p>
 
                 </div>
@@ -132,11 +200,11 @@
                 <h2>Quem Somos</h2>
 
                 <p>
-                    A Auto Nobre Representações atua
-                    no mercado oferecendo soluções
-                    em embalagens e produtos descartáveis,
-                    conectando empresas às melhores marcas
-                    do setor.
+                    A Auto Nobre Representações atua há mais de 7 anos no mercado de embalagens, consolidando-se como referência no fornecimento de soluções para o setor comercial e alimentício. Ao longo dessa trajetória, construímos parcerias sólidas com fabricantes e distribuidores, o que nos permite oferecer um dos maiores mixes de produtos do segmento no Brasil.
+
+                    Nosso foco é unir variedade, qualidade e preço competitivo, garantindo que nossos clientes encontrem em um único lugar tudo o que precisam em embalagens e descartáveis para o dia a dia do seu negócio. Trabalhamos com uma linha completa de produtos voltados para eficiência operacional, praticidade e melhor custo-benefício, sempre acompanhando as demandas do mercado.
+
+                    Mais do que fornecer produtos, buscamos facilitar a operação dos nossos clientes, conectando empresas a soluções confiáveis e acessíveis, com atendimento voltado à agilidade e à satisfação.
                 </p>
 
             </div>

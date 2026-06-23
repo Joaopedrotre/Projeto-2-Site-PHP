@@ -162,8 +162,7 @@ if (!in_array($page, $allowed_pages)) {
                     <p>
 
                         Representação comercial especializada
-                        em produtos descartáveis e soluções
-                        para empresas.
+                        nos mais diversos produtos descartáveis.
 
                     </p>
 

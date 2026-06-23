@@ -2,7 +2,7 @@
 
     <div class="container">
 
-        <div class="text-center mb-5 mt-5">
+        <div class="text-center mb-5">
 
             <h1>Catálogo Digital</h1>
 
@@ -22,7 +22,7 @@
 
                 width="100%"
 
-                height="1280"
+                height="900"
 
                 title="Catálogo Grupo Ultra">
 
